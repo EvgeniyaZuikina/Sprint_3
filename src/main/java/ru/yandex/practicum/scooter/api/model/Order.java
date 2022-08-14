@@ -21,13 +21,13 @@ public class Order {
     private Integer rentTime;
     private String deliveryDate;
     private Integer track;
-    private List<String> color;
+    private String[] color;
     private String comment;
     private Date createdAt;
     private Date updatedAt;
     private Integer status;
 
-    public Order(String firstName, String lastName, String address, String metroStation, String phone, Integer rentTime, String deliveryDate, String comment, List <String> color) {
+    public Order(String firstName, String lastName, String address, String metroStation, String phone, Integer rentTime, String deliveryDate, String comment, List<String> color) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -36,7 +36,7 @@ public class Order {
         this.rentTime = rentTime;
         this.deliveryDate = deliveryDate;
         this.comment = comment;
-        this.color = color;
+        this.color = color.toArray(new String[0]);
     }
 
     public static Order getRandomOrder() {
